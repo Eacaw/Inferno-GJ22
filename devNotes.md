@@ -1,3 +1,7 @@
+# Dev Notes
+
+Figured it might be useful to have a place to write down notes about the development of the project. Use this to add any development notes that might come in handy for the other to know as we build.
+
 ## File structure
 
 ### Assets
