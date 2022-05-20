@@ -1,8 +1,5 @@
 ## File structure
 
-[]: # Language: markdown
-[]: # Path: devNotes.md
-
 ### Assets
 
 This is the top level folder for assets, all subfolders will be in here.
