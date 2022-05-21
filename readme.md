@@ -10,4 +10,4 @@ Theme announced at 9pm local time, so we had a brief brainstorming session befor
 
 #### Day 2:
 
-Initial planning completed with the team. Game theme is based one Dante's inferno and utilises the player _killing themselves_ to progress through a set of levels. Basic player movement added within a basic tunnel view (3d platform style). Basic title screen included with start button that brings you to dev space
+Initial planning completed with the team. Game theme is based on Dante's inferno and utilises the player _killing themselves_ to progress through a set of levels. Basic player movement added within a basic tunnel view (3d platform style). Basic title screen included with start button that brings you to dev space
