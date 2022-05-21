@@ -11,13 +11,11 @@ public class PlayerMovement : MonoBehaviour
     public int MaxJump = 1;
     int JumpCount = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         var horizontal = Input.GetAxis("Horizontal");

@@ -7,7 +7,6 @@ public class CameraController : MonoBehaviour
 
     public Transform target;
 
-    // Update is called once per frame
     void Update()
     {
         transform.position = target.transform.position + new Vector3(8, 4, -1);
