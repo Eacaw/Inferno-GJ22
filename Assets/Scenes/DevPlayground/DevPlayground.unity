@@ -589,7 +589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317467019}
   m_LocalRotation: {x: 0.1035534, y: -0.6035543, z: 0.079459265, w: 0.7865655}
-  m_LocalPosition: {x: -1.69, y: 24.63, z: -29.69}
+  m_LocalPosition: {x: 9.64, y: 7.16, z: -5.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -817,7 +817,7 @@ GameObject:
   - component: {fileID: 443714037}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1842,6 +1842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  MaxJump: 1
 --- !u!54 &818495448
 Rigidbody:
   m_ObjectHideFlags: 0
