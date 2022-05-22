@@ -13,9 +13,7 @@ public class DoorScript : MonoBehaviour, EventInterface
     void Start()
     {
         startPosition = transform.position;
-        endPosition = transform.position + new Vector3(0, 10, 0);
-        Debug.Log("Start Position: " + startPosition);
-        Debug.Log("End Position: " + endPosition);
+        endPosition = transform.position + new Vector3(0, 4, 0);
     }
 
     void Update()
