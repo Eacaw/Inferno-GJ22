@@ -21,7 +21,7 @@ public class ButtonTrigger : MonoBehaviour, TriggerInterface
         startPosition = transform.position;
         endPosition = transform.position + new Vector3(0, -0.15f, 0);
         // Fetch the correct event script
-        eventScript = eventObject.GetComponent(typeof(EventInterface)) as EventInterface;
+        setupEventObject();
     }
 
     void Update()
@@ -48,16 +48,28 @@ public class ButtonTrigger : MonoBehaviour, TriggerInterface
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
-        {
-            isTriggered = false;
-            eventScript.endExecution(); // <-- Method needs to be added in the interface
-        }
+
+        isTriggered = false;
+        eventScript.endExecution(); // <-- Method needs to be added in the interface
+
     }
 
     void MoveButton(Vector3 newPosition)
     {
         transform.position = newPosition;
+    }
+
+    public void setupEventObject()
+    {
+        // Fetch the correct event script
+        try
+        {
+            eventScript = eventObject.GetComponent(typeof(EventInterface)) as EventInterface;
+        }
+        catch (System.Exception e)
+        {
+            Debug.Log("Error: " + e);
+        }
     }
 
 }
