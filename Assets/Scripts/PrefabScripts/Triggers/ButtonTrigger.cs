@@ -1,25 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Interfaces;
 
-public class ButtonTrigger : MonoBehaviour
+public class ButtonTrigger : MonoBehaviour, TriggerInterface
 {
 
     private bool isTriggered = false;
     private Vector3 startPosition;
     private Vector3 endPosition;
 
+    // public GameObject gameObject;
+
     public GameObject eventObject;
-    private DoorScript doorScript;
+    private EventInterface eventScript;
 
     void Start()
     {
+        // Store the limits to the button's movement
         startPosition = transform.position;
         endPosition = transform.position + new Vector3(0, -0.15f, 0);
-
-        // Need to consider how we want to do this, we don't want to only check for
-        // door scripts. Open to suggestions. 
-        doorScript = eventObject.GetComponent<DoorScript>();
+        // Fetch the correct event script
+        eventScript = eventObject.GetComponent(typeof(EventInterface)) as EventInterface;
     }
 
     void Update()
@@ -40,7 +42,7 @@ public class ButtonTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             isTriggered = true;
-            doorScript.executeEvent(); // <-- Method needs to be added in the interface
+            eventScript.executeEvent(); // <-- Method needs to be added in the interface
         }
     }
 
@@ -49,7 +51,7 @@ public class ButtonTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             isTriggered = false;
-            doorScript.endExecution(); // <-- Method needs to be added in the interface
+            eventScript.endExecution(); // <-- Method needs to be added in the interface
         }
     }
 
@@ -57,4 +59,5 @@ public class ButtonTrigger : MonoBehaviour
     {
         transform.position = newPosition;
     }
+
 }

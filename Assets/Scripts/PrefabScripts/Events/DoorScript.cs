@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Interfaces;
 
-public class DoorScript : MonoBehaviour
+public class DoorScript : MonoBehaviour, EventInterface
 {
     private Vector3 startPosition;
     private Vector3 endPosition;
@@ -33,7 +34,6 @@ public class DoorScript : MonoBehaviour
 
     public void executeEvent()
     {
-
         isTriggered = true;
     }
 
