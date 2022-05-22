@@ -4,7 +4,8 @@ namespace Interfaces
 {
     public interface TriggerInterface
     {
-        // void setGameObject();
+        void setupEventObject();
+
 
     }
 }
