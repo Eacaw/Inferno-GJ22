@@ -10,11 +10,16 @@ public class ButtonTrigger : MonoBehaviour
     private Vector3 endPosition;
 
     public GameObject eventObject;
+    private DoorScript doorScript;
 
     void Start()
     {
         startPosition = transform.position;
         endPosition = transform.position + new Vector3(0, -0.15f, 0);
+
+        // Need to consider how we want to do this, we don't want to only check for
+        // door scripts. Open to suggestions. 
+        doorScript = eventObject.GetComponent<DoorScript>();
     }
 
     void Update()
@@ -35,7 +40,7 @@ public class ButtonTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             isTriggered = true;
-            // eventObject.executeEvent(); <-- Method to be added in the interface
+            doorScript.executeEvent(); // <-- Method needs to be added in the interface
         }
     }
 
@@ -44,6 +49,7 @@ public class ButtonTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             isTriggered = false;
+            doorScript.endExecution(); // <-- Method needs to be added in the interface
         }
     }
 
