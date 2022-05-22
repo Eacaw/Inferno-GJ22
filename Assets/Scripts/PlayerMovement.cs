@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Vector3 spawnAbove = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+            Vector3 spawnAbove = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
             GameObject capsule = Instantiate(PlayerCorpsePrefab, transform.position, transform.rotation);
             transform.position = spawnPoint;
             rb.velocity = Vector3.zero;
