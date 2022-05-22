@@ -22,8 +22,6 @@ public class DoorScript : MonoBehaviour, EventInterface
     {
         if (isTriggered && transform.position.y <= endPosition.y)
         {
-            Debug.Log("Position: " + transform.position);
-            Debug.Log("End Position: " + endPosition);
             transform.Translate(new Vector3(0, 0, 1) * (speed * Time.deltaTime));
         }
         else if (!isTriggered && transform.position.y >= startPosition.y)
