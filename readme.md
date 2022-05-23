@@ -2,7 +2,7 @@
 
 ## Theme: "Death is only the beginning"
 
-## Updates:
+### Updates:
 
 ### Day 1:
 
