@@ -18,4 +18,4 @@ A lot of prefabs were added today (button, door). Leaving your original body was
 
 #### Day 4:
 
-Created 8 basic levels that can be utilized for the game.
+Created 8 basic levels that can be utilized for the game. Add more details to the `DevPlayground` and features such as a ramp. Update the UI at the end of each level to progress to the next level in the build.
