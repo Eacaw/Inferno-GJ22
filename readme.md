@@ -14,4 +14,8 @@ Initial planning completed with the team. Game theme is based on Dante's inferno
 
 #### Day 3:
 
-A lot of prefabs were added today (button, door). Leaving your original body was also added and can be done by pressing [E]. UI interfaces were created for the end of the level as well as a pause menu that allow for navigation to other screens/scenes. 
+A lot of prefabs were added today (button, door). Leaving your original body was also added and can be done by pressing [E]. UI interfaces were created for the end of the level as well as a pause menu that allow for navigation to other screens/scenes.
+
+#### Day 4:
+
+Created 8 basic levels that can be utilized for the game.
