@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     public int MaxJump = 1;
     int JumpCount = 0;
+    float RotateSpeed = 50.0f;
 
     void Start()
     {
@@ -21,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+
+
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
         if (Input.GetKeyDown(KeyCode.Space) && JumpCount < MaxJump)
@@ -36,7 +39,12 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector3.zero;
         }
 
-        transform.Translate(new Vector3(horizontal, 0, vertical) * (speed * Time.deltaTime));
+        if (rb.velocity != Vector3.zero)
+        {
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(new Vector3(transform.GetComponent<Rigidbody>().velocity.x, 0, transform.GetComponent<Rigidbody>().velocity.z)), Time.deltaTime * RotateSpeed);
+        }
+
+        transform.Translate(new Vector3(-1 * vertical, 0, horizontal) * (speed * Time.deltaTime));
     }
 
     void Jump()

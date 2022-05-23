@@ -13,7 +13,7 @@ public class DoorScript : MonoBehaviour, EventInterface
     void Start()
     {
         startPosition = transform.position;
-        endPosition = transform.position + new Vector3(0, 4, 0);
+        endPosition = transform.position + new Vector3(0, 3.5f, 0);
     }
 
     void Update()
