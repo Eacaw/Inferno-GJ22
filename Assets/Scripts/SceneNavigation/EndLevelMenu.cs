@@ -7,8 +7,10 @@ public class EndLevelMenu : MonoBehaviour
 {
     public GameObject endLevelUI;
 
-    void Update()
+    public void NextLevel()
     {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void RestartLevel()
