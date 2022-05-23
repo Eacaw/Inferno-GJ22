@@ -39,10 +39,13 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector3.zero;
         }
 
-        if (rb.velocity != Vector3.zero)
-        {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(new Vector3(transform.GetComponent<Rigidbody>().velocity.x, 0, transform.GetComponent<Rigidbody>().velocity.z)), Time.deltaTime * RotateSpeed);
-        }
+        // THIS BIT IS THE PROBLEM
+        // if (rb.velocity != Vector3.zero)
+        // {
+        //     transform.rotation = Quaternion.RotateTowards(transform.rotation, 
+        //     Quaternion.LookRotation(new Vector3(transform.GetComponent<Rigidbody>().velocity.x, 0, transform.GetComponent<Rigidbody>().velocity.z)), 
+        //     Time.deltaTime * RotateSpeed);
+        // }
 
         transform.Translate(new Vector3(-1 * vertical, 0, horizontal) * (speed * Time.deltaTime));
     }
@@ -55,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter(Collision Col)
     {
-        if (Col.gameObject.tag == "Ground")
+        if (Col.gameObject.tag == "Ground" || Col.gameObject.tag == "Player")
         {
             JumpCount = 0;
         }
