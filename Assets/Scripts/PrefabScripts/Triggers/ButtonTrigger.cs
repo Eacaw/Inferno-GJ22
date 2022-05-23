@@ -42,7 +42,7 @@ public class ButtonTrigger : MonoBehaviour, TriggerInterface
         if (other.gameObject.tag == "Player")
         {
             isTriggered = true;
-            eventScript.executeEvent(); // <-- Method needs to be added in the interface
+            eventScript.executeEvent();
         }
     }
 
@@ -50,7 +50,7 @@ public class ButtonTrigger : MonoBehaviour, TriggerInterface
     {
 
         isTriggered = false;
-        eventScript.endExecution(); // <-- Method needs to be added in the interface
+        eventScript.endExecution();
 
     }
 
