@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject guideScreenUI;
+    public GameObject controlsScreenUI;
+
     public void loadDevPlaygroundScene()
     {
         SceneManager.LoadScene("DevPlayground");
@@ -10,12 +13,28 @@ public class MainMenu : MonoBehaviour
 
     public void loadLevelOne()
     {
-        SceneManager.LoadScene("LevelOne");
+        SceneManager.LoadScene("Level1");
     }
 
     public void loadGuide()
     {
-        SceneManager.LoadScene("Guide");
+        guideScreenUI.SetActive(true);
+    }
+
+    public void loadControls()
+    {
+        controlsScreenUI.SetActive(true);
+    }
+
+    public void backToMainMenu()
+    {
+        guideScreenUI.SetActive(false);
+        controlsScreenUI.SetActive(false);
+    }
+
+    public void backToGuide()
+    {
+        controlsScreenUI.SetActive(false);
     }
 
     public void quitGame()
