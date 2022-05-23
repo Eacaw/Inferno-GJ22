@@ -22,8 +22,12 @@ Created 8 basic levels that can be utilized for the game.
 
 Added some more assets to the project, including a ramp/wall that the player must use their bodies to climb.
 
-DevPG has been extended and will become the first level of the game once we have the remaining missing assets.
+DevPG has been extended and will become the first level of the game once we have the remaining missing assets. This is how it stands at time of writing: 
+
+![image](https://user-images.githubusercontent.com/24251551/169892035-83f9fb7d-e672-4f5f-8be9-1af25441f46e.png)
+
 
 Also fixed a bug wherein the player could force themselves to stick to a wall, resolved by adding a frictionless material to the player. Nice little bonus here that we were able to add a little bounce to the player. Fixed up the level a bit and updated the door/frame model to match the walls exactly.
 
 Attempted to include a new player model, but rotation issues have put that to one side for now, contemplating sticking with the original model.
+
