@@ -190,6 +190,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 11085c8a0606cc64e9f11f4bd67ae493, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 577fd3266645ad74bb4540c9a33a95a1, type: 2}
     - target: {fileID: 919132149155446097, guid: 11085c8a0606cc64e9f11f4bd67ae493, type: 3}
       propertyPath: m_Name
       value: Bodyhole
