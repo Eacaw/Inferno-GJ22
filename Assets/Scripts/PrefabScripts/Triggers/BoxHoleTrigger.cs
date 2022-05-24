@@ -7,8 +7,6 @@ public class BoxHoleTrigger : MonoBehaviour, TriggerInterface
 {
     public GameObject eventObject;
     private EventInterface eventScript;
-    // Start is called before the first frame update
-
     void Start()
     {
         setupEventObject();
@@ -33,7 +31,6 @@ public class BoxHoleTrigger : MonoBehaviour, TriggerInterface
     public void setupEventObject()
 
     {
-        // Fetch the correct event script
         try
         {
             eventScript = eventObject.GetComponent(typeof(EventInterface)) as EventInterface;
