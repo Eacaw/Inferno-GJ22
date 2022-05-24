@@ -10,6 +10,8 @@ public class DoorScript : MonoBehaviour, EventInterface
     public int speed;
 
     private bool isTriggered = false;
+    private bool canMove = true;
+
     void Start()
     {
         startPosition = transform.position;
@@ -18,11 +20,11 @@ public class DoorScript : MonoBehaviour, EventInterface
 
     void Update()
     {
-        if (isTriggered && transform.position.y <= endPosition.y)
+        if (isTriggered && transform.position.y <= endPosition.y && canMove)
         {
             transform.Translate(new Vector3(0, 0, 1) * (speed * Time.deltaTime));
         }
-        else if (!isTriggered && transform.position.y >= startPosition.y)
+        else if (!isTriggered && transform.position.y >= startPosition.y && canMove)
         {
             transform.Translate(new Vector3(0, 0, -2) * (speed * Time.deltaTime));
         }
@@ -36,5 +38,21 @@ public class DoorScript : MonoBehaviour, EventInterface
     public void endExecution()
     {
         isTriggered = false;
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canMove = false;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canMove = true;
+        }
     }
 }
