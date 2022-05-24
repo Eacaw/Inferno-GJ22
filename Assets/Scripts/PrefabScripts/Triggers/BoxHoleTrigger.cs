@@ -7,6 +7,8 @@ public class BoxHoleTrigger : MonoBehaviour, TriggerInterface
 {
     public GameObject eventObject;
     private EventInterface eventScript;
+
+    public GameObject indicatorLight;
     void Start()
     {
         setupEventObject();
@@ -16,6 +18,7 @@ public class BoxHoleTrigger : MonoBehaviour, TriggerInterface
     {
         if (other.gameObject.tag == "MovableTrigger")
         {
+            indicatorLight.GetComponent<Light>().color = Color.green;
             eventScript.executeEvent();
         }
     }
@@ -24,6 +27,7 @@ public class BoxHoleTrigger : MonoBehaviour, TriggerInterface
     {
         if (other.gameObject.tag == "MovableTrigger")
         {
+            indicatorLight.GetComponent<Light>().color = Color.red;
             eventScript.endExecution();
         }
     }
