@@ -1,17 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Interfaces;
 
 public class LaserScript : MonoBehaviour, EventInterface
 {
+
+
+    void Start()
+    {
+
+    }
     public void executeEvent()
     {
-        // lasers.setActive(false); Hide the model
+        gameObject.SetActive(false);
     }
 
     public void endExecution()
     {
-        // lasers.setActive(true); Show the model
+        gameObject.SetActive(true);
     }
 }
