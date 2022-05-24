@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndLevelTrigger : MonoBehaviour
 {
@@ -7,6 +8,16 @@ public class EndLevelTrigger : MonoBehaviour
     void OnTriggerEnter()
     {
         Time.timeScale = 0f;
-        gameManager.CompleteLevel();
+        Scene scene = SceneManager.GetActiveScene();
+        Debug.Log(scene.name);
+
+        if (scene.name != "Level8")
+        {
+            gameManager.CompleteLevel();
+        }
+        else
+        {
+            SceneManager.LoadScene("EndGame");
+        }
     }
 }
