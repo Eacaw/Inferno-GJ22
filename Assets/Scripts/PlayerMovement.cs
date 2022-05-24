@@ -37,10 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Vector3 spawnAbove = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
-            GameObject capsule = Instantiate(PlayerCorpsePrefab, transform.position, transform.rotation);
-            transform.position = respawnPoint;
-            rb.velocity = Vector3.zero;
+            this.dieAndRespawn(0);
         }
 
         transform.Translate(new Vector3(-1 * vertical, 0, horizontal) * (speed * Time.deltaTime));
@@ -68,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter(Collision Col)
     {
-        if (Col.gameObject.tag == "Ground" || Col.gameObject.tag == "Player")
+        if (Col.gameObject.tag == "Ground" || Col.gameObject.tag == "Corpse")
         {
             JumpCount = 0;
         }
@@ -82,5 +79,17 @@ public class PlayerMovement : MonoBehaviour
     double getVertical()
     {
         return Input.GetAxis("Vertical");
+    }
+
+    public void dieAndRespawn(int type)
+    {
+        if (type == 0)
+        {
+            Vector3 spawnAbove = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+            GameObject capsule = Instantiate(PlayerCorpsePrefab, transform.position, transform.rotation);
+        }
+        transform.position = respawnPoint;
+        rb.velocity = Vector3.zero;
+
     }
 }
