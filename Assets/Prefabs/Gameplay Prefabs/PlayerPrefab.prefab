@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  PlayerModel: {fileID: 2185790479742428305}
   PlayerCorpsePrefab: {fileID: 2799673080729796503, guid: e57e2be81eadf8f4d862004a2fddfa93, type: 3}
   MaxJump: 1
 --- !u!1 &8203218114978269118
@@ -254,7 +255,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2185790479742428305}
-  m_Material: {fileID: 13400000, guid: 739b9391f724f5d4eafd90abb832853a, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -268,7 +269,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2185790479742428305}
-  m_Material: {fileID: 13400000, guid: 739b9391f724f5d4eafd90abb832853a, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.81
