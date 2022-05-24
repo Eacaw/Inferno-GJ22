@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Interfaces;
 
-public class DoorScript : MonoBehaviour, EventInterface
+public class LaserScript : MonoBehaviour, EventInterface
 {
     public void executeEvent()
     {
