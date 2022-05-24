@@ -39,7 +39,7 @@ public class ButtonTrigger : MonoBehaviour, TriggerInterface
     // Handle Triggers
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Corpse")
         {
             isTriggered = true;
             eventScript.executeEvent();

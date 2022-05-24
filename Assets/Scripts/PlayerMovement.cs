@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,28 +8,28 @@ public class PlayerMovement : MonoBehaviour
     // Base user speed
     [SerializeField] private float speed = 5.0f;
     private Rigidbody rb;
-    public GameObject PlayerCorpsePrefab;
+    public GameObject PlayerModel, PlayerCorpsePrefab;
     private Vector3 spawnPoint, respawnPoint;
 
     public int MaxJump = 1;
     int JumpCount = 0;
+    // double previousRotation = 0;
+    private float rotateSpeed = 180.0f;
+
+    private Quaternion qTo;
 
     void Start()
     {
         spawnPoint = transform.position;
         respawnPoint = transform.position + new Vector3(0, -20, 0);
         rb = GetComponent<Rigidbody>();
-
-        Debug.Log("Player Spawned at: " + spawnPoint);
-        Debug.Log("Player Respawned at: " + respawnPoint);
     }
 
     void Update()
     {
+        var horizontal = (float)this.getHorizontal();
+        var vertical = (float)this.getVertical();
 
-
-        var horizontal = Input.GetAxis("Horizontal");
-        var vertical = Input.GetAxis("Vertical");
         if (Input.GetKeyDown(KeyCode.Space) && JumpCount < MaxJump)
         {
             Jump();
@@ -36,15 +37,25 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Vector3 spawnAbove = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
-            GameObject capsule = Instantiate(PlayerCorpsePrefab, transform.position, transform.rotation);
-            transform.position = respawnPoint;
-            rb.velocity = Vector3.zero;
+            this.dieAndRespawn(0);
         }
 
         transform.Translate(new Vector3(-1 * vertical, 0, horizontal) * (speed * Time.deltaTime));
     }
 
+    void FixedUpdate()
+    {
+        var horizontal = (float)this.getHorizontal();
+        var vertical = (float)this.getVertical();
+
+        Vector3 target = new Vector3(transform.position.x + horizontal,
+                                    transform.position.y + vertical,
+                                    0);
+        var lookPos = target - transform.position;
+        float angle = Mathf.Atan2(lookPos.x, lookPos.y) * Mathf.Rad2Deg - 90;
+        qTo = Quaternion.AngleAxis(angle, Vector3.up);
+        PlayerModel.transform.rotation = Quaternion.RotateTowards(transform.rotation, qTo, rotateSpeed);
+    }
 
     void Jump()
     {
@@ -54,9 +65,31 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter(Collision Col)
     {
-        if (Col.gameObject.tag == "Ground" || Col.gameObject.tag == "Player")
+        if (Col.gameObject.tag == "Ground" || Col.gameObject.tag == "Corpse")
         {
             JumpCount = 0;
         }
+    }
+
+    double getHorizontal()
+    {
+        return Input.GetAxis("Horizontal");
+    }
+
+    double getVertical()
+    {
+        return Input.GetAxis("Vertical");
+    }
+
+    public void dieAndRespawn(int type)
+    {
+        if (type == 0)
+        {
+            Vector3 spawnAbove = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+            GameObject capsule = Instantiate(PlayerCorpsePrefab, transform.position, transform.rotation);
+        }
+        transform.position = respawnPoint;
+        rb.velocity = Vector3.zero;
+
     }
 }

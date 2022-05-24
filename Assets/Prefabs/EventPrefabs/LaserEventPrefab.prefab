@@ -259,4 +259,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2260e3b3a6caf4e8ee6b27a99df3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserBeams: {fileID: 0}
+--- !u!65 &8803873547324823650
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4561640747998051597}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 20, z: 2}
+  m_Center: {x: 0, y: 9.5, z: 0}

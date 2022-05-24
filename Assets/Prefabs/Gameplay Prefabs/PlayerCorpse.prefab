@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7908833101153728691}
   m_Layer: 0
   m_Name: PlayerCorpse
-  m_TagString: Player
+  m_TagString: Corpse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a26769d52fe102348a79c0024b124ef7, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Corpse
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a26769d52fe102348a79c0024b124ef7, type: 3}
