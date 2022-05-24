@@ -9,7 +9,6 @@ public class EndLevelTrigger : MonoBehaviour
     {
         Time.timeScale = 0f;
         Scene scene = SceneManager.GetActiveScene();
-        Debug.Log(scene.name);
 
         if (scene.name != "Level8")
         {
