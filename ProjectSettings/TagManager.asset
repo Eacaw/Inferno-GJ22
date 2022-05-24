@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - MovableTrigger
+  - Corpse
   layers:
   - Default
   - TransparentFX
