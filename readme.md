@@ -36,9 +36,24 @@ Updated main menu screen to now include a guide page (nothing useful on it yet),
 
 ### Day 5: 
 
+Say hello to the most important change so far, we finally say goodbye to Mr Pillman McCapsule and welcome in... well we don't have a name for him yet: 
+
+![Playermodel](https://user-images.githubusercontent.com/24251551/170148297-0c142be8-b2cd-4599-a3cf-389f9354d416.png)
+
+
 Today was a big push towards finishing off prefabs and getting ready to focus on level design. Added a box into a hole trigger mechanic, which we can use to store blocks in hard to reach places and get the player to fetch it down to progress. We've also added a player/corpse into a hole trigger mechanic, in which a player must leave one of their corpses in order to progress. 
 
-We've also added another event prefab in the form of the laser doorway. The lasers will instantly kill you if you touch them, they will also instantly destroy a corpse if one was to touch them!  
+We've also added another event prefab in the form of the laser doorway. The lasers will instantly kill you if you touch them, they will also instantly destroy a corpse if one was to touch them! 
+
+Here are some screenshots showcasing their models (all subject to sudden and immediate chantge at time of writing)
+
+BoxForHole + HoleForBox with BoxInHole and IndicatorLightActive
+![BodHole](https://user-images.githubusercontent.com/24251551/170148447-33a56929-2a6b-4fab-be68-395de1989c35.png)
+
+LaserBeams + LaserFrame + BodyHole
+![BodyHole](https://user-images.githubusercontent.com/24251551/170148563-a3a72071-55d2-45a9-bb79-f82676df4229.png)
+
+As you can see from the images, they both come with a littel indicator light that goes green once the trigger has been activated, signalling that you can progress.
 
 The playground has been decorated a little more with the new triggers, some additional lighting effects and a lower respawn location which will be carried across to the fullgame levels. Here's today's update picture:
 
