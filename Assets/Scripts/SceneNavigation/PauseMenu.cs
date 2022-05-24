@@ -42,6 +42,12 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
+    public void ResetLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
+    }
+
     public void ControlPage()
     {
         controlPageUI.SetActive(true);
