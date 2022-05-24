@@ -14,23 +14,22 @@ public class PlayerMovement : MonoBehaviour
     public int MaxJump = 1;
     int JumpCount = 0;
     // double previousRotation = 0;
+    private float rotateSpeed = 180.0f;
+
+    private Quaternion qTo;
 
     void Start()
     {
         spawnPoint = transform.position;
         respawnPoint = transform.position + new Vector3(0, -20, 0);
         rb = GetComponent<Rigidbody>();
-
-        Debug.Log("Player Spawned at: " + spawnPoint);
-        Debug.Log("Player Respawned at: " + respawnPoint);
     }
 
     void Update()
     {
+        var horizontal = (float)this.getHorizontal();
+        var vertical = (float)this.getVertical();
 
-
-        var horizontal = Input.GetAxis("Horizontal");
-        var vertical = Input.GetAxis("Vertical");
         if (Input.GetKeyDown(KeyCode.Space) && JumpCount < MaxJump)
         {
             Jump();
@@ -49,13 +48,16 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        var horizontal = Input.GetAxis("Horizontal");
-        var vertical = Input.GetAxis("Vertical");
+        var horizontal = (float)this.getHorizontal();
+        var vertical = (float)this.getVertical();
+
         Vector3 target = new Vector3(transform.position.x + horizontal,
                                     transform.position.y + vertical,
                                     0);
-
-        PlayerModel.transform.Rotate(target);// = rotation;
+        var lookPos = target - transform.position;
+        float angle = Mathf.Atan2(lookPos.x, lookPos.y) * Mathf.Rad2Deg - 90;
+        qTo = Quaternion.AngleAxis(angle, Vector3.up);
+        PlayerModel.transform.rotation = Quaternion.RotateTowards(transform.rotation, qTo, rotateSpeed);
     }
 
     void Jump()
@@ -72,12 +74,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    double getRotation()
+    double getHorizontal()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        double alpha = Math.Atan2((float)y, (float)x);
-        return alpha;
+        return Input.GetAxis("Horizontal");
     }
 
+    double getVertical()
+    {
+        return Input.GetAxis("Vertical");
+    }
 }
