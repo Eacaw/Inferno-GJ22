@@ -4,7 +4,11 @@ namespace Interfaces
 {
     public interface TriggerInterface
     {
-        void setupEventObject();
+
+        // Must contain this public GameObject and private Interface reference:
+        // public GameObject eventObject;
+        // private EventInterface eventScript;
+        public void setupEventObject();
         // Method body must be:
         // {
         //     // Fetch the correct event script
