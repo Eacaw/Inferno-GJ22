@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 5.0f;
     private Rigidbody rb;
     public GameObject PlayerCorpsePrefab;
-    private Vector3 spawnPoint;
+    private Vector3 spawnPoint, respawnPoint;
 
     public int MaxJump = 1;
     int JumpCount = 0;
@@ -17,7 +17,11 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         spawnPoint = transform.position;
+        respawnPoint = transform.position + new Vector3(0, -20, 0);
         rb = GetComponent<Rigidbody>();
+
+        Debug.Log("Player Spawned at: " + spawnPoint);
+        Debug.Log("Player Respawned at: " + respawnPoint);
     }
 
     void Update()
@@ -35,11 +39,12 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 spawnAbove = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
             GameObject capsule = Instantiate(PlayerCorpsePrefab, transform.position, transform.rotation);
-            transform.position = spawnPoint;
+            transform.position = respawnPoint;
             rb.velocity = Vector3.zero;
         }
 
         // THIS BIT IS THE PROBLEM
+        // We still need to discuss this.
         // if (rb.velocity != Vector3.zero)
         // {
         //     transform.rotation = Quaternion.RotateTowards(transform.rotation, 
@@ -50,25 +55,6 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(new Vector3(-1 * vertical, 0, horizontal) * (speed * Time.deltaTime));
     }
 
-    void FixedUpdate()
-    {
-        // Get the velocity
-        Vector3 horizontalMove = rb.velocity;
-        // Don't use the vertical velocity
-        horizontalMove.y = 0;
-        // Calculate the approximate distance that will be traversed
-        float distance = horizontalMove.magnitude * Time.fixedDeltaTime;
-        // Normalize horizontalMove since it should be used to indicate direction
-        horizontalMove.Normalize();
-        RaycastHit hit;
-
-        // Check if the body's current velocity will result in a collision
-        if (rb.SweepTest(horizontalMove, out hit, distance))
-        {
-            // If so, stop the movement
-            rb.velocity = new Vector3(0, rb.velocity.y, 0);
-        }
-    }
 
     void Jump()
     {
