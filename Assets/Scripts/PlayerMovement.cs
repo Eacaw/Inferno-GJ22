@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,11 +8,12 @@ public class PlayerMovement : MonoBehaviour
     // Base user speed
     [SerializeField] private float speed = 5.0f;
     private Rigidbody rb;
-    public GameObject PlayerCorpsePrefab;
+    public GameObject PlayerModel, PlayerCorpsePrefab;
     private Vector3 spawnPoint, respawnPoint;
 
     public int MaxJump = 1;
     int JumpCount = 0;
+    // double previousRotation = 0;
 
     void Start()
     {
@@ -45,6 +47,16 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(new Vector3(-1 * vertical, 0, horizontal) * (speed * Time.deltaTime));
     }
 
+    void FixedUpdate()
+    {
+        var horizontal = Input.GetAxis("Horizontal");
+        var vertical = Input.GetAxis("Vertical");
+        Vector3 target = new Vector3(transform.position.x + horizontal,
+                                    transform.position.y + vertical,
+                                    0);
+
+        PlayerModel.transform.Rotate(target);// = rotation;
+    }
 
     void Jump()
     {
@@ -59,4 +71,13 @@ public class PlayerMovement : MonoBehaviour
             JumpCount = 0;
         }
     }
+
+    double getRotation()
+    {
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
+        double alpha = Math.Atan2((float)y, (float)x);
+        return alpha;
+    }
+
 }
