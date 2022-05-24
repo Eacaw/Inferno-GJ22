@@ -2755,11 +2755,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2808483878172094789, guid: 1a50e020da64cf44b815f9dd99124a4e, type: 3}
   m_PrefabInstance: {fileID: 3690912073229260652}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1577015426370021627 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2799673080729796503, guid: 1a50e020da64cf44b815f9dd99124a4e, type: 3}
-  m_PrefabInstance: {fileID: 3690912073229260652}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3690912073229260652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2781,7 +2776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2808483878172094789, guid: 1a50e020da64cf44b815f9dd99124a4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -329.89224
+      value: -326.78
       objectReference: {fileID: 0}
     - target: {fileID: 2808483878172094789, guid: 1a50e020da64cf44b815f9dd99124a4e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3086,18 +3081,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6111060243866836119, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
   m_PrefabInstance: {fileID: 765652933459047225}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6843520027293495264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577015426370021627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4c0fa45afe5e2944924314eaf2eb7b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  PlayerCorpsePrefab: {fileID: 2799673080729796503, guid: e57e2be81eadf8f4d862004a2fddfa93, type: 3}
-  MaxJump: 1
