@@ -7,8 +7,9 @@ public class BodyHoleTrigger : MonoBehaviour, TriggerInterface
 {
     public GameObject eventObject;
     private EventInterface eventScript;
-
     public GameObject indicatorLight;
+
+    public bool isTriggered = false;
     void Start()
     {
         setupEventObject();
@@ -16,20 +17,37 @@ public class BodyHoleTrigger : MonoBehaviour, TriggerInterface
 
     void OnTriggerStay(Collider other)
     {
+
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Corpse")
         {
             indicatorLight.GetComponent<Light>().color = Color.green;
-            eventScript.executeEvent();
+            if (this.eventObject)
+            {
+                eventScript.executeEvent();
+            }
+            this.isTriggered = true;
         }
+
     }
 
     void OnTriggerExit(Collider other)
     {
+
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Corpse")
         {
             indicatorLight.GetComponent<Light>().color = Color.red;
-            eventScript.endExecution();
+            if (this.eventObject)
+            {
+                eventScript.endExecution();
+            }
+            this.isTriggered = false;
         }
+
+    }
+
+    public bool getIsTriggered()
+    {
+        return this.isTriggered;
     }
 
     public void setupEventObject()

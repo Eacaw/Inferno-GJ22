@@ -1734,6 +1734,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7014506183818927443, guid: 53e74b5a45947cd498b6739c1aad5777, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7643550407469205481, guid: 53e74b5a45947cd498b6739c1aad5777, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.85
@@ -1786,7 +1790,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BodyHolePrefab
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6521751691269908835, guid: 53e74b5a45947cd498b6739c1aad5777, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 53e74b5a45947cd498b6739c1aad5777, type: 3}
 --- !u!1 &1074622059 stripped
 GameObject:
@@ -4004,6 +4009,10 @@ PrefabInstance:
       propertyPath: eventObject
       value: 
       objectReference: {fileID: 1472690743}
+    - target: {fileID: 6353893790974810897, guid: 700a737aeb7c6884e8b595377a9fc123, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8997666443669827417, guid: 700a737aeb7c6884e8b595377a9fc123, type: 3}
       propertyPath: m_Name
       value: BoxHolePrefab

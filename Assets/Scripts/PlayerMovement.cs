@@ -13,10 +13,10 @@ public class PlayerMovement : MonoBehaviour
 
     public int MaxJump = 1;
     int JumpCount = 0;
-    // double previousRotation = 0;
     private float rotateSpeed = 180.0f;
 
     private Quaternion qTo;
+    private bool inputDisabled = false;
 
     void Start()
     {
@@ -38,6 +38,9 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             this.dieAndRespawn(0);
+            this.inputDisabled = false;
+            rb.freezeRotation = true;
+            rb.rotation = Quaternion.identity;
         }
 
         transform.Translate(new Vector3(-1 * vertical, 0, horizontal) * (speed * Time.deltaTime));
@@ -45,16 +48,19 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        var horizontal = (float)this.getHorizontal();
-        var vertical = (float)this.getVertical();
+        if (!inputDisabled)
+        {
+            var horizontal = (float)this.getHorizontal();
+            var vertical = (float)this.getVertical();
 
-        Vector3 target = new Vector3(transform.position.x + horizontal,
-                                    transform.position.y + vertical,
-                                    0);
-        var lookPos = target - transform.position;
-        float angle = Mathf.Atan2(lookPos.x, lookPos.y) * Mathf.Rad2Deg - 90;
-        qTo = Quaternion.AngleAxis(angle, Vector3.up);
-        PlayerModel.transform.rotation = Quaternion.RotateTowards(transform.rotation, qTo, rotateSpeed);
+            Vector3 target = new Vector3(transform.position.x + horizontal,
+                                        transform.position.y + vertical,
+                                        0);
+            var lookPos = target - transform.position;
+            float angle = Mathf.Atan2(lookPos.x, lookPos.y) * Mathf.Rad2Deg - 90;
+            qTo = Quaternion.AngleAxis(angle, Vector3.up);
+            PlayerModel.transform.rotation = Quaternion.RotateTowards(transform.rotation, qTo, rotateSpeed);
+        }
     }
 
     void Jump()
@@ -73,12 +79,26 @@ public class PlayerMovement : MonoBehaviour
 
     double getHorizontal()
     {
-        return Input.GetAxis("Horizontal");
+        if (!inputDisabled)
+        {
+            return Input.GetAxis("Horizontal");
+        }
+        else
+        {
+            return 0;
+        }
     }
 
     double getVertical()
     {
-        return Input.GetAxis("Vertical");
+        if (!inputDisabled)
+        {
+            return Input.GetAxis("Vertical");
+        }
+        else
+        {
+            return 0;
+        }
     }
 
     public void dieAndRespawn(int type)
@@ -91,5 +111,13 @@ public class PlayerMovement : MonoBehaviour
         transform.position = respawnPoint;
         rb.velocity = Vector3.zero;
 
+    }
+
+    public void disableInput()
+    {
+
+        rb.freezeRotation = false;
+        rb.AddForce(new Vector3((float)(-5 * getVertical()), 0, (float)(5 * getHorizontal())), ForceMode.Impulse);
+        this.inputDisabled = true;
     }
 }
