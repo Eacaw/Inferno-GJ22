@@ -113,6 +113,12 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    public void setRespawn()
+    {
+        Debug.Log(transform.position);
+        respawnPoint = transform.position;
+    }
+
     public void disableInput()
     {
 
