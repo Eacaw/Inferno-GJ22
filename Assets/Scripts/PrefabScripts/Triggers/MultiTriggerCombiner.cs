@@ -34,6 +34,11 @@ public class MultiTriggerCombiner : MonoBehaviour, TriggerInterface
             eventScript.executeEvent();
         }
 
+        if (numTriggered < triggers.Length)
+        {
+            eventScript.endExecution();
+        }
+
     }
 
     public bool getIsTriggered() { return false; }
