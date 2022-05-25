@@ -5,18 +5,23 @@ public class EndLevelTrigger : MonoBehaviour
 {
     public GameManager gameManager;
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
-        Time.timeScale = 0f;
-        Scene scene = SceneManager.GetActiveScene();
-
-        if (scene.name != "Level8")
+        if (other.gameObject.tag == "Player")
         {
             gameManager.CompleteLevel();
-        }
-        else
-        {
-            SceneManager.LoadScene("EndGame");
+
+            Time.timeScale = 0f;
+            Scene scene = SceneManager.GetActiveScene();
+
+            if (scene.name != "Level8")
+            {
+                gameManager.CompleteLevel();
+            }
+            else
+            {
+                SceneManager.LoadScene("EndGame");
+            }
         }
     }
 }

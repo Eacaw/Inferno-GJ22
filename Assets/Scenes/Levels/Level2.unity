@@ -8823,15 +8823,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5107380449768815749, guid: e416a50ae58e74341a9bec286bab9702, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.008984
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5107380449768815749, guid: e416a50ae58e74341a9bec286bab9702, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.4236245
+      value: 5.385
       objectReference: {fileID: 0}
     - target: {fileID: 5107380449768815749, guid: e416a50ae58e74341a9bec286bab9702, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.268227
+      value: 3.356
       objectReference: {fileID: 0}
     - target: {fileID: 5107380449768815749, guid: e416a50ae58e74341a9bec286bab9702, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8861,6 +8861,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5107380449768815754, guid: e416a50ae58e74341a9bec286bab9702, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 5107380449768815754, guid: e416a50ae58e74341a9bec286bab9702, type: 3}
       propertyPath: m_Name
       value: MultiTriggerController
