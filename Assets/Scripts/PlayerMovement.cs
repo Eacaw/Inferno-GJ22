@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && Time.timeScale != 0f)
         {
             this.dieAndRespawn(0);
             this.inputDisabled = false;
