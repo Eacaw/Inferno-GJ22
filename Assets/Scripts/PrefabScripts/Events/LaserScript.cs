@@ -30,7 +30,7 @@ public class LaserScript : MonoBehaviour, EventInterface
         else if (
             other.gameObject.tag == "Corpse")
         {
-            Destroy(other);
+            Destroy(other.gameObject);
         }
     }
 }
