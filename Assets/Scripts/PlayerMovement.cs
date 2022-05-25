@@ -39,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
         {
             this.dieAndRespawn(0);
             this.inputDisabled = false;
+            rb.freezeRotation = true;
+            rb.rotation = Quaternion.identity;
         }
 
         transform.Translate(new Vector3(-1 * vertical, 0, horizontal) * (speed * Time.deltaTime));
@@ -113,8 +115,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void disableInput()
     {
-        this.inputDisabled = true;
-        Debug.Log("Input disabled");
+
         rb.freezeRotation = false;
+        rb.AddForce(new Vector3((float)(-5 * getVertical()), 0, (float)(5 * getHorizontal())), ForceMode.Impulse);
+        this.inputDisabled = true;
     }
 }

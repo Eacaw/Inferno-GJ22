@@ -9,6 +9,8 @@ public class BoxHoleTrigger : MonoBehaviour, TriggerInterface
     private EventInterface eventScript;
 
     public GameObject indicatorLight;
+
+    public bool isTriggered;
     void Start()
     {
         setupEventObject();
@@ -30,6 +32,11 @@ public class BoxHoleTrigger : MonoBehaviour, TriggerInterface
             indicatorLight.GetComponent<Light>().color = Color.red;
             eventScript.endExecution();
         }
+    }
+
+    public bool getIsTriggered()
+    {
+        return this.isTriggered;
     }
 
     public void setupEventObject()

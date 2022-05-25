@@ -8,6 +8,8 @@ namespace Interfaces
         // Must contain this public GameObject and private Interface reference:
         // public GameObject eventObject;
         // private EventInterface eventScript;
+        // public bool isTriggered; // <- must track current state
+        public bool getIsTriggered();
         public void setupEventObject();
         // Method body must be:
         // {

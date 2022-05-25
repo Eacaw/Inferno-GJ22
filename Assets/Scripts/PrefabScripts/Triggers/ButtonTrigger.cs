@@ -42,7 +42,10 @@ public class ButtonTrigger : MonoBehaviour, TriggerInterface
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Corpse")
         {
             isTriggered = true;
-            eventScript.executeEvent();
+            if (this.eventObject)
+            {
+                eventScript.executeEvent();
+            }
         }
     }
 
@@ -50,13 +53,21 @@ public class ButtonTrigger : MonoBehaviour, TriggerInterface
     {
 
         isTriggered = false;
-        eventScript.endExecution();
+        if (this.eventObject)
+        {
+            eventScript.endExecution();
+        }
 
     }
 
     void MoveButton(Vector3 newPosition)
     {
         transform.position = newPosition;
+    }
+
+    public bool getIsTriggered()
+    {
+        return this.isTriggered;
     }
 
     public void setupEventObject()
