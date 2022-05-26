@@ -29,8 +29,6 @@ public class MultiTriggerCombiner : MonoBehaviour, TriggerInterface
             }
         }
 
-        Debug.Log(triggers.Length);
-        Debug.Log(numTriggered);
 
         if (numTriggered == triggers.Length)
         {
