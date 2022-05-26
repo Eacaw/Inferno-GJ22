@@ -5,9 +5,8 @@ using Interfaces;
 
 public class RagdollTrigger : MonoBehaviour
 {
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision with " + other.name);
         if (other.gameObject.tag == "Player")
         {
             GameObject player = other.gameObject;
