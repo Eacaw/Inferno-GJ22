@@ -38,9 +38,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && Time.timeScale != 0f)
         {
             this.dieAndRespawn(0);
-            this.inputDisabled = false;
-            rb.freezeRotation = true;
-            rb.rotation = Quaternion.identity;
+
         }
 
         transform.Translate(new Vector3(-1 * vertical, 0, horizontal) * (speed * Time.deltaTime));
@@ -48,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!inputDisabled)
+        if (!this.inputDisabled)
         {
             var horizontal = (float)this.getHorizontal();
             var vertical = (float)this.getVertical();
@@ -79,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
 
     double getHorizontal()
     {
-        if (!inputDisabled)
+        if (!this.inputDisabled)
         {
             return Input.GetAxis("Horizontal");
         }
@@ -91,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
     double getVertical()
     {
-        if (!inputDisabled)
+        if (!this.inputDisabled)
         {
             return Input.GetAxis("Vertical");
         }
@@ -103,13 +101,20 @@ public class PlayerMovement : MonoBehaviour
 
     public void dieAndRespawn(int type)
     {
+        //Type 0 = Spawn a corpse
+        //Type 1 = Respawn without corpse (laser)
         if (type == 0)
         {
             Vector3 spawnAbove = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
             GameObject capsule = Instantiate(PlayerCorpsePrefab, transform.position, transform.rotation);
         }
+
+        this.inputDisabled = false;
+        rb.freezeRotation = true;
+        rb.rotation = Quaternion.identity;
         transform.position = respawnPoint;
         rb.velocity = Vector3.zero;
+
 
     }
 
@@ -123,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         rb.freezeRotation = false;
+
         rb.AddForce(new Vector3((float)(-5 * getVertical()), 0, (float)(5 * getHorizontal())), ForceMode.Impulse);
         this.inputDisabled = true;
     }
