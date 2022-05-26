@@ -118,6 +118,11 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    public void setRespawn()
+    {
+        respawnPoint = transform.position;
+    }
+
     public void disableInput()
     {
 
