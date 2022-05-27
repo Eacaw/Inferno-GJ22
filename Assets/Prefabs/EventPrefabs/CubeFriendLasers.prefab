@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 157420378597540703}
   m_Layer: 0
-  m_Name: NoDoorLasers
+  m_Name: CubeFriendLasers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,10 +170,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -270
       objectReference: {fileID: 0}
+    - target: {fileID: -8347221205978777541, guid: e1768f0a21297ac46960474b59a1603f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63e0b289d0aa9554b8e42d4de72e90db, type: 2}
+    - target: {fileID: -4718040791104185828, guid: e1768f0a21297ac46960474b59a1603f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63e0b289d0aa9554b8e42d4de72e90db, type: 2}
+    - target: {fileID: -1858088320818141857, guid: e1768f0a21297ac46960474b59a1603f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63e0b289d0aa9554b8e42d4de72e90db, type: 2}
+    - target: {fileID: -1288733144017031944, guid: e1768f0a21297ac46960474b59a1603f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63e0b289d0aa9554b8e42d4de72e90db, type: 2}
     - target: {fileID: 919132149155446097, guid: e1768f0a21297ac46960474b59a1603f, type: 3}
       propertyPath: m_Name
       value: LaserBars
       objectReference: {fileID: 0}
+    - target: {fileID: 3280927520727180574, guid: e1768f0a21297ac46960474b59a1603f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63e0b289d0aa9554b8e42d4de72e90db, type: 2}
+    - target: {fileID: 6148596154634031546, guid: e1768f0a21297ac46960474b59a1603f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63e0b289d0aa9554b8e42d4de72e90db, type: 2}
+    - target: {fileID: 6944656104360116776, guid: e1768f0a21297ac46960474b59a1603f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63e0b289d0aa9554b8e42d4de72e90db, type: 2}
+    - target: {fileID: 7743480366618694112, guid: e1768f0a21297ac46960474b59a1603f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63e0b289d0aa9554b8e42d4de72e90db, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1768f0a21297ac46960474b59a1603f, type: 3}
 --- !u!1 &3705770951409437396 stripped
@@ -207,7 +239,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 20, y: 20, z: 1}
   m_Center: {x: 0, y: 10, z: 0}
---- !u!114 &3404485236635901772
+--- !u!114 &7380185083725736879
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,9 +248,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3705770951409437396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e2260e3b3a6caf4e8ee6b27a99df3f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d590913eb7a9f54a90531cc8d128eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventObject: {fileID: 0}
+  isTriggered: 0
   playerInstance: {fileID: 0}
 --- !u!4 &4046022089181286510 stripped
 Transform:
