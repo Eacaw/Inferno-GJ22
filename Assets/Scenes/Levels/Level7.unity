@@ -4835,6 +4835,10 @@ PrefabInstance:
       propertyPath: triggers.Array.data[1]
       value: 
       objectReference: {fileID: 221408260}
+    - target: {fileID: 7529516298510481091, guid: 333cc7d915378a241b18317006570645, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7529516299088186434, guid: 333cc7d915378a241b18317006570645, type: 3}
       propertyPath: m_Name
       value: CubeFriendHolePrefab
@@ -9232,6 +9236,10 @@ PrefabInstance:
       propertyPath: triggers.Array.data[1]
       value: 
       objectReference: {fileID: 336881986}
+    - target: {fileID: 7529516298510481091, guid: 333cc7d915378a241b18317006570645, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7529516299088186434, guid: 333cc7d915378a241b18317006570645, type: 3}
       propertyPath: m_Name
       value: CubeFriendHolePrefab
