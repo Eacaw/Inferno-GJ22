@@ -118,9 +118,9 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public void setRespawn()
+    public void setRespawn(int multiplier)
     {
-        respawnPoint = transform.position;
+        respawnPoint = transform.position + new Vector3(0, 0, (1 * multiplier));
     }
 
     public void disableInput()
