@@ -21,7 +21,12 @@ public class BoxHoleTrigger : MonoBehaviour, TriggerInterface
         if (other.gameObject.tag == "MovableTrigger")
         {
             indicatorLight.GetComponent<Light>().color = Color.green;
-            eventScript.executeEvent();
+            this.isTriggered = true;
+            if (this.eventObject)
+            {
+
+                eventScript.executeEvent();
+            }
         }
     }
 
@@ -30,7 +35,12 @@ public class BoxHoleTrigger : MonoBehaviour, TriggerInterface
         if (other.gameObject.tag == "MovableTrigger")
         {
             indicatorLight.GetComponent<Light>().color = Color.red;
-            eventScript.endExecution();
+            this.isTriggered = false;
+            if (this.eventObject)
+            {
+
+                eventScript.endExecution();
+            }
         }
     }
 
