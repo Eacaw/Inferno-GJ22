@@ -1,18 +1,12 @@
 using UnityEngine;
 using Interfaces;
 
-public class RiseyPole : MonoBehaviour, EventInterface, TriggerInterface
+public class RiseyPole : MonoBehaviour, EventInterface
 {
 
     private bool isMoving = true;
     private bool canMove = true;
-    public GameObject eventObject;
-    private EventInterface eventScript;
 
-    void Start()
-    {
-        setupEventObject();
-    }
     public bool getIsTriggered()
     {
         return !isMoving;
@@ -31,13 +25,11 @@ public class RiseyPole : MonoBehaviour, EventInterface, TriggerInterface
     public void executeEvent()
     {
         this.isMoving = false;
-        eventScript.executeEvent();
     }
 
     public void endExecution()
     {
         this.isMoving = true;
-        eventScript.endExecution();
     }
 
     void OnTriggerStay(Collider other)
@@ -53,20 +45,6 @@ public class RiseyPole : MonoBehaviour, EventInterface, TriggerInterface
         if (other.gameObject.tag == "Player")
         {
             canMove = true;
-        }
-    }
-
-    public void setupEventObject()
-
-    {
-        // Fetch the correct event script
-        try
-        {
-            eventScript = eventObject.GetComponent(typeof(EventInterface)) as EventInterface;
-        }
-        catch (System.Exception e)
-        {
-            Debug.Log("You haven't connected a gameobject to this trigger" + e);
         }
     }
 

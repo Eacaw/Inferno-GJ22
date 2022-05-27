@@ -10,6 +10,7 @@ public class RespawnTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             playerInstance.setRespawn();
+            // setActive(false);
         }
     }
 }
