@@ -54,7 +54,7 @@ public class LaserScript : MonoBehaviour, EventInterface
             {
                 Rigidbody otherRb = other.gameObject.GetComponent<Rigidbody>();
                 // push the object backwards
-                otherRb.AddForce(-otherRb.velocity * 3.0f, ForceMode.Impulse);
+                otherRb.AddForce(-otherRb.velocity * 2.0f, ForceMode.Impulse);
             }
         }
 
