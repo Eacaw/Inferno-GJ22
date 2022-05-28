@@ -24,6 +24,7 @@ public class LaserScript : MonoBehaviour, EventInterface
         flickerLight.enabled = false;
         laserBars.gameObject.SetActive(false);
         deathTrigger.SetActive(false);
+        FindObjectOfType<SoundManager>().Play("LaserShutdown");
     }
 
     public void endExecution()
@@ -32,13 +33,13 @@ public class LaserScript : MonoBehaviour, EventInterface
         flickerLight.enabled = true;
         laserBars.gameObject.SetActive(true);
         deathTrigger.SetActive(true);
+
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Player has entered the laser trigger");
             playerMovement.dieAndRespawn(1);
         }
         else if (
