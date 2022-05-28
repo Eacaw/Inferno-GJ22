@@ -9,7 +9,7 @@ public class LaserScript : MonoBehaviour, EventInterface
     public GameObject laserBars;
     private PlayerMovement playerMovement;
     public AudioSource laserBuzzSound;
-    // private AudioSource laserShutoffSound;
+
     public Light flickerLight;
 
     private GameObject deathTrigger;
@@ -18,23 +18,23 @@ public class LaserScript : MonoBehaviour, EventInterface
     {
         playerMovement = playerInstance.GetComponent<PlayerMovement>();
         deathTrigger = GetComponent<BoxCollider>().gameObject;
-        // laserShutoffSound = GetComponent<AudioSource>();
+
     }
     public void executeEvent()
     {
         laserBuzzSound.Stop();
-        // laserShutoffSound.Stop();
+
         flickerLight.enabled = false;
-        laserBars.gameObject.SetActive(false);
+        laserBars.SetActive(false);
         deathTrigger.SetActive(false);
     }
 
     public void endExecution()
     {
-        // laserShutoffSound.Play();
+
         laserBuzzSound.Play();
         flickerLight.enabled = true;
-        laserBars.gameObject.SetActive(true);
+        laserBars.SetActive(true);
         deathTrigger.SetActive(true);
     }
 
