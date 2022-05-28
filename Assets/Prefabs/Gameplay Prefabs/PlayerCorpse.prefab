@@ -115,7 +115,7 @@ PrefabInstance:
     - target: {fileID: -871965983884748951, guid: a26769d52fe102348a79c0024b124ef7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 790f2321a7f615a469c666a5fad90f9e, type: 2}
+      objectReference: {fileID: 2100000, guid: 2a6115f854dddf04da8e0837b2aaa465, type: 2}
     - target: {fileID: 919132149155446097, guid: a26769d52fe102348a79c0024b124ef7, type: 3}
       propertyPath: m_Name
       value: Alien_Tall
