@@ -20,6 +20,7 @@ public class EndLevelTrigger : MonoBehaviour
             }
             else
             {
+                Time.timeScale = 1f;
                 SceneManager.LoadScene("EndGame");
             }
         }
