@@ -13,6 +13,8 @@ public class LaserScript : MonoBehaviour, EventInterface
     public bool bounceCube = false;
     private GameObject deathTrigger;
 
+    private bool isSoundPlaying;
+
     void Start()
     {
         playerMovement = playerInstance.GetComponent<PlayerMovement>();
@@ -24,7 +26,7 @@ public class LaserScript : MonoBehaviour, EventInterface
         flickerLight.enabled = false;
         laserBars.gameObject.SetActive(false);
         deathTrigger.SetActive(false);
-        FindObjectOfType<SoundManager>().Play("LaserShutdown");
+
     }
 
     public void endExecution()
@@ -34,6 +36,15 @@ public class LaserScript : MonoBehaviour, EventInterface
         laserBars.gameObject.SetActive(true);
         deathTrigger.SetActive(true);
 
+    }
+
+    void playEndSound()
+    {
+        if (!isSoundPlaying)
+        {
+            isSoundPlaying = true;
+            FindObjectOfType<SoundManager>().Play("LaserShutdown");
+        }
     }
 
     void OnTriggerEnter(Collider other)
