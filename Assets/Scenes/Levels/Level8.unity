@@ -307,6 +307,10 @@ PrefabInstance:
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
     - target: {fileID: 8373993052440479393, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: m_Name
       value: NoDoorLasers (5)
@@ -861,6 +865,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e14611274ad83fe4396c9ced9b071297, type: 3}
+--- !u!1 &97883026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8373993052440479393, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+  m_PrefabInstance: {fileID: 1769544331}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &107661977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -913,6 +922,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3404485236635901772, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
@@ -1278,6 +1291,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3404485236635901772, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
@@ -3053,11 +3070,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 355886627352211888, guid: e14611274ad83fe4396c9ced9b071297, type: 3}
   m_PrefabInstance: {fileID: 128085208}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &323775670 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3705770951409437396, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
-  m_PrefabInstance: {fileID: 107661977}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &336553736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6111060243866836119, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
@@ -3877,6 +3889,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3404485236635901772, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
@@ -4765,6 +4781,10 @@ PrefabInstance:
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
     - target: {fileID: 8373993052440479393, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: m_Name
       value: NoDoorLasers (17)
@@ -4828,6 +4848,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3404485236635901772, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
@@ -5106,7 +5130,7 @@ PrefabInstance:
     - target: {fileID: 7463270602521199745, guid: cc05abcb5a0bfb945a4e4239886bdce6, type: 3}
       propertyPath: eventObject
       value: 
-      objectReference: {fileID: 1735167660}
+      objectReference: {fileID: 97883026}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc05abcb5a0bfb945a4e4239886bdce6, type: 3}
 --- !u!4 &666049423 stripped
@@ -5346,6 +5370,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3404485236635901772, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
@@ -7506,7 +7534,7 @@ PrefabInstance:
     - target: {fileID: 7463270602521199745, guid: cc05abcb5a0bfb945a4e4239886bdce6, type: 3}
       propertyPath: eventObject
       value: 
-      objectReference: {fileID: 2090991425}
+      objectReference: {fileID: 1579043043}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc05abcb5a0bfb945a4e4239886bdce6, type: 3}
 --- !u!1 &1071167003
@@ -8095,7 +8123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6009561198455753842, guid: 700a737aeb7c6884e8b595377a9fc123, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.96
+      value: -1.97
       objectReference: {fileID: 0}
     - target: {fileID: 6119540239893538372, guid: 700a737aeb7c6884e8b595377a9fc123, type: 3}
       propertyPath: eventObject
@@ -8390,6 +8418,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3404485236635901772, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
@@ -9298,6 +9330,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInstance: {fileID: 0}
+  laserBars: {fileID: 0}
+  laserBuzzSound: {fileID: 0}
+  flickerLight: {fileID: 0}
 --- !u!4 &1489276371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 355886627352211888, guid: e14611274ad83fe4396c9ced9b071297, type: 3}
@@ -10036,6 +10071,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e14611274ad83fe4396c9ced9b071297, type: 3}
+--- !u!1 &1579043043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8373993052440479393, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+  m_PrefabInstance: {fileID: 630115905}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1592284370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6111060243866836119, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
@@ -10215,6 +10255,10 @@ PrefabInstance:
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
     - target: {fileID: 8373993052440479393, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: m_Name
       value: NoDoorLasers (8)
@@ -10372,15 +10416,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2808483878172094789, guid: 1a50e020da64cf44b815f9dd99124a4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.44
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2808483878172094789, guid: 1a50e020da64cf44b815f9dd99124a4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 38.37
+      value: 39.2
       objectReference: {fileID: 0}
     - target: {fileID: 2808483878172094789, guid: 1a50e020da64cf44b815f9dd99124a4e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.74
+      value: -18.51
       objectReference: {fileID: 0}
     - target: {fileID: 2808483878172094789, guid: 1a50e020da64cf44b815f9dd99124a4e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10464,6 +10508,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3404485236635901772, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
@@ -10918,6 +10966,10 @@ PrefabInstance:
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
     - target: {fileID: 8373993052440479393, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: m_Name
       value: NoDoorLasers (2)
@@ -11110,6 +11162,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3404485236635901772, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
@@ -11389,11 +11445,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732738533}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1735167660 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3705770951409437396, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
-  m_PrefabInstance: {fileID: 1769544331}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1741451903 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6111060243866836119, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
@@ -11451,6 +11502,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3404485236635901772, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
@@ -11736,6 +11791,10 @@ PrefabInstance:
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
     - target: {fileID: 8373993052440479393, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: m_Name
       value: NoDoorLasers (18)
@@ -11794,6 +11853,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3404485236635901772, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
@@ -12299,7 +12362,7 @@ PrefabInstance:
     - target: {fileID: 7463270602521199745, guid: cc05abcb5a0bfb945a4e4239886bdce6, type: 3}
       propertyPath: eventObject
       value: 
-      objectReference: {fileID: 323775670}
+      objectReference: {fileID: 2099938934}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc05abcb5a0bfb945a4e4239886bdce6, type: 3}
 --- !u!4 &1815617966 stripped
@@ -12706,6 +12769,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3404485236635901772, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
@@ -13463,6 +13530,10 @@ PrefabInstance:
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
     - target: {fileID: 8373993052440479393, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: m_Name
       value: NoDoorLasers (7)
@@ -13942,6 +14013,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInstance: {fileID: 0}
+  laserBars: {fileID: 0}
+  laserBuzzSound: {fileID: 0}
+  flickerLight: {fileID: 0}
 --- !u!1001 &2002882668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14591,6 +14665,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInstance: {fileID: 0}
+  laserBars: {fileID: 0}
+  laserBuzzSound: {fileID: 0}
+  flickerLight: {fileID: 0}
 --- !u!4 &2079369836 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6111060243866836119, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
@@ -14920,11 +14997,6 @@ Transform:
   m_Father: {fileID: 1063422122}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2090991425 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3705770951409437396, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
-  m_PrefabInstance: {fileID: 630115905}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2091242070 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 355886627352211888, guid: e14611274ad83fe4396c9ced9b071297, type: 3}
@@ -15073,6 +15145,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
+--- !u!1 &2099938934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8373993052440479393, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+  m_PrefabInstance: {fileID: 107661977}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2111190847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15192,6 +15269,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3404485236635901772, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: playerInstance
+      value: 
+      objectReference: {fileID: 1960774186}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: playerInstance
       value: 
       objectReference: {fileID: 1960774186}
