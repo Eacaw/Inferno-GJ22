@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+
         var horizontal = (float)this.getHorizontal();
         var vertical = (float)this.getVertical();
 
@@ -118,9 +119,9 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public void setRespawn(int multiplier)
+    public void setRespawn(int zMultiplier, int yMultiplier, int xMultiplier)
     {
-        respawnPoint = transform.position + new Vector3(0, 0, (1 * multiplier));
+        respawnPoint = transform.position + new Vector3((1 * xMultiplier), (1 * yMultiplier), (1 * zMultiplier));
     }
 
     public void disableInput()
