@@ -9,8 +9,12 @@ public class DoorScript : MonoBehaviour, EventInterface
     private Vector3 endPosition;
     public int speed;
 
+    public AudioSource doorMoving;
+
     private bool isTriggered = false;
     private bool canMove = true;
+    private bool isMoving = false;
+    private bool isMoveSoundPlaying = false;
 
     void Start()
     {
@@ -20,13 +24,35 @@ public class DoorScript : MonoBehaviour, EventInterface
 
     void Update()
     {
-        if (isTriggered && transform.position.y <= endPosition.y && canMove)
+        if (canMove)
         {
-            transform.Translate(new Vector3(0, 0, 1) * (speed * Time.deltaTime));
+            if (isTriggered && transform.position.y <= endPosition.y)
+            {
+                isMoving = true;
+                transform.Translate(new Vector3(0, 0, 1) * (speed * Time.deltaTime));
+            }
+            else if (!isTriggered && transform.position.y >= startPosition.y)
+            {
+                isMoving = true;
+                transform.Translate(new Vector3(0, 0, -2) * (speed * Time.deltaTime));
+            }
+            else
+            {
+                isMoving = false;
+                isMoveSoundPlaying = false;
+                doorMoving.Stop();
+            }
         }
-        else if (!isTriggered && transform.position.y >= startPosition.y && canMove)
+        playMoveSound();
+    }
+
+    void playMoveSound()
+    {
+        if (!isMoveSoundPlaying && isMoving)
         {
-            transform.Translate(new Vector3(0, 0, -2) * (speed * Time.deltaTime));
+            Debug.Log("Play Move Sound");
+            doorMoving.Play();
+            isMoveSoundPlaying = true;
         }
     }
 
