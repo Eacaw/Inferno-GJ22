@@ -10,7 +10,7 @@ public class DieAndRespawn : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            playerInstance.setRespawn(0, 0, respawnOffset);
+            playerInstance.setRespawn(0, respawnOffset, 0);
             playerInstance.dieAndRespawn(1);
         }
     }
