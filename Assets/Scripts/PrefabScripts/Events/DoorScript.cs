@@ -50,7 +50,6 @@ public class DoorScript : MonoBehaviour, EventInterface
     {
         if (!isMoveSoundPlaying && isMoving)
         {
-            Debug.Log("Play Move Sound");
             doorMoving.Play();
             isMoveSoundPlaying = true;
         }

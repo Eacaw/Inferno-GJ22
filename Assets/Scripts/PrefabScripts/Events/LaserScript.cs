@@ -40,6 +40,7 @@ public class LaserScript : MonoBehaviour, EventInterface
     {
         if (other.gameObject.tag == "Player")
         {
+            FindObjectOfType<SoundManager>().Play("LaserSizzle");
             playerMovement.dieAndRespawn(1);
         }
         else if (

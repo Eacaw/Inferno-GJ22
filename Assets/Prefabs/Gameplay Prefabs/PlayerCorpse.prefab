@@ -108,6 +108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Demon
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 68e6c269d4df0d9468fa3572abaff513, type: 3}
+      propertyPath: m_TagString
+      value: Corpse
+      objectReference: {fileID: 0}
     - target: {fileID: 5890278844041205852, guid: 68e6c269d4df0d9468fa3572abaff513, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
