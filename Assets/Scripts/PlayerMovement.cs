@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+
         var horizontal = (float)this.getHorizontal();
         var vertical = (float)this.getVertical();
 
