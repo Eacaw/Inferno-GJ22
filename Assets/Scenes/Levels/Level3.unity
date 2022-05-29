@@ -2825,6 +2825,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlockWallPrefab (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 6882916699662812717, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
 --- !u!4 &1153532063 stripped
@@ -2989,6 +2993,10 @@ PrefabInstance:
     - target: {fileID: 6882916699662812717, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
       propertyPath: m_Name
       value: BlockWallPrefab (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6882916699662812717, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
@@ -4787,6 +4795,10 @@ PrefabInstance:
     - target: {fileID: 6882916699662812717, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
       propertyPath: m_Name
       value: BlockWallPrefab (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6882916699662812717, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}

@@ -63,3 +63,16 @@ There have also been a number of bugfixes made, and UI improvements and refineme
 
 Along with the usual bugfixes and improvements. 
 
+### Days 6 - 9:
+
+We, being the amazing people that we are, seem to have abandoned updating the readme every day, instead we focussed purely on the development of the game. These days (Wednesday - Saturday) we spent the majority of our time adding levels to the game, working to playtest each others levels as we finished them and ironing out any kinks as they were discovered. 
+
+Saturday was spend fixing as many of the UI issues as we could, refining the layout and UX for the game, and ensuring that everything was connected as intended. We also spent some time working on finding and adding all the sounds that you hear in game, adding a new sound manager class to handle it all for us, making our lives much easier. 
+
+### Day 10:
+
+We counted slightly wrong, and this is day 9 for most people, however because we started counting on day 0, this is day 10 for us. Today has been mostly play testing through the game finding anything that needs fixing immediately, noting down anything that we can fix later and just generally tidying everything up as well as updating the credits and attributions, then setting up the game page and figuring out how to upload it. Then we've got around 24 hours to polish and refine and upload another build if we have the time! 
+
+## Going forwards:
+
+We have many plans to keep this project alive, at a much slower pace though, so we can focus on getting it right and taking the time we need to give it the attention that it really deserves. Watch this space for updates, alternatively, join us on discord! Reach out at any point with ideas or suggestions. We're always open to new ideas from anyone! 
