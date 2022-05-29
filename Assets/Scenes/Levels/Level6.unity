@@ -842,6 +842,10 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8060127717264056361, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
 --- !u!4 &122470023 stripped
@@ -3034,6 +3038,10 @@ PrefabInstance:
     - target: {fileID: 8060127717264056361, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
       propertyPath: m_Convex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060127717264056361, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8f9e82eddd73847b8fa90891b67603, type: 3}
