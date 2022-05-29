@@ -9,7 +9,6 @@ public class EndLevelTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            gameManager.CompleteLevel();
 
             Time.timeScale = 0f;
             Scene scene = SceneManager.GetActiveScene();
