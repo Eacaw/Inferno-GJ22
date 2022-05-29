@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 5577557530379086043, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
+      propertyPath: bounceCube
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8373993052440479393, guid: 776f07aab27ebee45ab07b0fce8a749e, type: 3}
       propertyPath: m_Name
       value: NoDoorLasers

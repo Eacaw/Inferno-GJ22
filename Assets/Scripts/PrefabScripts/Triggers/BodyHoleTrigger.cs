@@ -30,6 +30,14 @@ public class BodyHoleTrigger : MonoBehaviour, TriggerInterface
 
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Corpse")
+        {
+            FindObjectOfType<SoundManager>().Play("BoxSuccess");
+        }
+    }
+
     void OnTriggerExit(Collider other)
     {
 

@@ -30,6 +30,15 @@ public class BoxHoleTrigger : MonoBehaviour, TriggerInterface
         }
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "MovableTrigger")
+        {
+            Debug.Log("Box has entered the Hole");
+            FindObjectOfType<SoundManager>().Play("BoxSuccess");
+        }
+    }
+
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "MovableTrigger")

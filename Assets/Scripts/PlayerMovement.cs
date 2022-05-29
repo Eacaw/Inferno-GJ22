@@ -70,8 +70,14 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter(Collision Col)
     {
-        if (Col.gameObject.tag == "Ground" || Col.gameObject.tag == "Corpse")
+        if (Col.gameObject.tag == "Ground")
         {
+            FindObjectOfType<SoundManager>().Play("PlayerSplat");
+            JumpCount = 0;
+        }
+        else if (Col.gameObject.tag == "Corpse")
+        {
+            FindObjectOfType<SoundManager>().Play("CorpseSplat");
             JumpCount = 0;
         }
     }

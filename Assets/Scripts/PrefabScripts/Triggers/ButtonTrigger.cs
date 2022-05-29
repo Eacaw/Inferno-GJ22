@@ -36,6 +36,14 @@ public class ButtonTrigger : MonoBehaviour, TriggerInterface
         }
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            FindObjectOfType<SoundManager>().Play("ButtonClick");
+        }
+    }
+
     // Handle Triggers
     void OnTriggerStay(Collider other)
     {
