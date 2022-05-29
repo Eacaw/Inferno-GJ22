@@ -1,7 +1,5 @@
-using UnityEngine.Audio;
 using UnityEngine;
 using System;
-using System.Collections;
 
 
 public class SoundManager : MonoBehaviour
@@ -37,7 +35,7 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
-        Play("Ambient");
+        Play("Ambient"); // Starts the music, will continue forever
     }
 
     public void Play(string name)
@@ -51,8 +49,4 @@ public class SoundManager : MonoBehaviour
         s.source.Play();
     }
 
-    void Update()
-    {
-
-    }
 }

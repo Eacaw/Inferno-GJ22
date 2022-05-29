@@ -13,7 +13,7 @@ public class LaserScript : MonoBehaviour, EventInterface
     public bool bounceCube = false;
     private GameObject deathTrigger;
 
-    private bool isSoundPlaying;
+    private bool shutOffSoundPlayed = false;
 
     void Start()
     {
@@ -26,7 +26,7 @@ public class LaserScript : MonoBehaviour, EventInterface
         flickerLight.enabled = false;
         laserBars.gameObject.SetActive(false);
         deathTrigger.SetActive(false);
-
+        playEndSound();
     }
 
     public void endExecution()
@@ -35,14 +35,14 @@ public class LaserScript : MonoBehaviour, EventInterface
         flickerLight.enabled = true;
         laserBars.gameObject.SetActive(true);
         deathTrigger.SetActive(true);
-
+        this.shutOffSoundPlayed = false;
     }
 
     void playEndSound()
     {
-        if (!isSoundPlaying)
+        if (!shutOffSoundPlayed)
         {
-            isSoundPlaying = true;
+            this.shutOffSoundPlayed = true;
             FindObjectOfType<SoundManager>().Play("LaserShutdown");
         }
     }
