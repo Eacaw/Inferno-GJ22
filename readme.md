@@ -1,8 +1,12 @@
-# Game Jam 2022
+![Inferno_Logo](https://user-images.githubusercontent.com/24251551/170896099-419b8a9f-9f19-470f-a2f1-80f0113ab0d5.png)
+
+# Game Jam 2022 - Inferno
 
 ## Theme: "Death is only the beginning"
 
-### Updates:
+## Status: **Submitted**! Play the game [here](https://eacaw.itch.io/inferno)
+
+### DevLog:
 
 ### Day 1:
 
