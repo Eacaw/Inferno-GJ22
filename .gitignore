@@ -16,7 +16,7 @@
 /[Mm]emoryCaptures/
 /[Ww]ebGL Builds/
 /[Tt]extMesh Pro/
-/[Aa]ssets/[Ii]mported[Aa]ssets
+#6/[Aa]ssets/[Ii]mported[Aa]ssets
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
