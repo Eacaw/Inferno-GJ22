@@ -5,6 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject guideScreenUI;
     public GameObject controlsScreenUI;
+    public GameObject levelSelectUI;
 
     public void loadDevPlaygroundScene()
     {
@@ -14,6 +15,11 @@ public class MainMenu : MonoBehaviour
     public void loadLevelOne()
     {
         SceneManager.LoadScene("Level1");
+    }
+
+    public void levelSelect()
+    {
+        levelSelectUI.SetActive(true);
     }
 
     public void loadGuide()
@@ -30,6 +36,7 @@ public class MainMenu : MonoBehaviour
     {
         guideScreenUI.SetActive(false);
         controlsScreenUI.SetActive(false);
+        levelSelectUI.SetActive(false);
     }
 
     public void backToGuide()
