@@ -31,6 +31,7 @@ public class LaserScript : MonoBehaviour, EventInterface
 
     public void endExecution()
     {
+        Debug.Log("Ending execution");
         laserBuzzSound.Play();
         flickerLight.enabled = true;
         laserBars.gameObject.SetActive(true);

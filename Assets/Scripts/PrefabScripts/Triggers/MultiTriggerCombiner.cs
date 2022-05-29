@@ -10,6 +10,8 @@ public class MultiTriggerCombiner : MonoBehaviour, TriggerInterface
 
     public GameObject[] triggers;
 
+    private bool hasFired = false;
+
     void Start()
     {
         setupEventObject();
@@ -29,15 +31,16 @@ public class MultiTriggerCombiner : MonoBehaviour, TriggerInterface
             }
         }
 
-
         if (numTriggered == triggers.Length)
         {
             eventScript.executeEvent();
+            hasFired = true;
         }
 
-        if (numTriggered < triggers.Length)
+        if (hasFired && numTriggered < triggers.Length)
         {
             eventScript.endExecution();
+            hasFired = false;
         }
 
     }
