@@ -35,7 +35,7 @@ public class LevelSelect : MonoBehaviour
 
     public void SelectLevel7()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Level7");
     }
 
     public void SelectLevel8()
