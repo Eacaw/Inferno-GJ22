@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b25ebd06d29f0094c8d346fa33384804, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 413e8661c595b1e42957a3ea5ce4d259, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4493585093827132993, guid: 3cf35a65b7b70c240999979381e47ca8, type: 3}
     - target: {fileID: 919132149155446097, guid: 413e8661c595b1e42957a3ea5ce4d259, type: 3}
       propertyPath: m_Name
       value: CubeFriendHole
@@ -219,7 +223,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 4493585093827132993, guid: 413e8661c595b1e42957a3ea5ce4d259, type: 3}
+  m_Mesh: {fileID: 4493585093827132993, guid: 3cf35a65b7b70c240999979381e47ca8, type: 3}
 --- !u!65 &7529516298510481091
 BoxCollider:
   m_ObjectHideFlags: 0

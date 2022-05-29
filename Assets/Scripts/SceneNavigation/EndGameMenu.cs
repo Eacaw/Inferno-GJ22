@@ -4,13 +4,13 @@ using UnityEngine.SceneManagement;
 public class EndGameMenu : MonoBehaviour
 {
 
-    public void loadMainScreen()
+    void Update()
     {
-        SceneManager.LoadScene("MainMenu");
-    }
-
-    public void quitGame()
-    {
-        Application.Quit();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Escape key was pressed");
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }

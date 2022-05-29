@@ -31,6 +31,7 @@ public class LaserScript : MonoBehaviour, EventInterface
 
     public void endExecution()
     {
+        Debug.Log("Ending execution");
         laserBuzzSound.Play();
         flickerLight.enabled = true;
         laserBars.gameObject.SetActive(true);
@@ -61,7 +62,7 @@ public class LaserScript : MonoBehaviour, EventInterface
         }
         // This is not a perfect solution, we need to refine this, it's going in the fixit bucket
         else if (
-            other.gameObject.tag == "MovableTrigger")
+            other.gameObject.tag == "MovableTrigger" || other.gameObject.tag == "CubeFriend")
         {
             if (this.bounceCube)
             {
