@@ -4,7 +4,8 @@
 
 ## Theme: "Death is only the beginning"
 
-## Status: **Submitted**! Play the game [here](https://eacaw.itch.io/inferno)
+## Status:
+**Submitted**! Play the game [here](https://eacaw.itch.io/inferno)
 
 ### DevLog:
 
