@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
 
     public int cameraOffsetId = 0;
 
-    void Update()
+    void LateUpdate()
     {
         Vector3[] cameraOffsets = new Vector3[]
         {

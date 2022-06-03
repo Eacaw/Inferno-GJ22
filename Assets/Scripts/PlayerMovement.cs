@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
 
     private Quaternion qTo;
     private bool inputDisabled = false;
+
+    public VariableJoystick variableJoystick;
+
+    public Button JumpButton;
+    public Button SacrificeButton;
 
     void Start()
     {
@@ -41,16 +47,16 @@ public class PlayerMovement : MonoBehaviour
             this.dieAndRespawn(0);
 
         }
-
-        transform.Translate(new Vector3(-1 * vertical, 0, horizontal) * (speed * Time.deltaTime));
+        Vector3 direction = Vector3.left * variableJoystick.Vertical + Vector3.forward * variableJoystick.Horizontal;
+        transform.Translate(direction * (speed * Time.deltaTime));
     }
 
     void FixedUpdate()
     {
         if (!this.inputDisabled)
         {
-            var horizontal = (float)this.getHorizontal();
-            var vertical = (float)this.getVertical();
+            var horizontal = variableJoystick.Horizontal;
+            var vertical = variableJoystick.Vertical;
 
             Vector3 target = new Vector3(transform.position.x + horizontal,
                                         transform.position.y + vertical,
@@ -62,10 +68,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void Jump()
+    public void Jump()
     {
-        rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
-        JumpCount += 1;
+        if (JumpCount == 0)
+        {
+            rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
+            JumpCount++;
+        }
     }
 
     void OnCollisionEnter(Collision Col)
