@@ -704,6 +704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MobileOverlay
       objectReference: {fileID: 0}
+    - target: {fileID: 5533919267428164798, guid: 984c2f8e157764b4bb1d6619d97902a9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8723484073273378137, guid: 984c2f8e157764b4bb1d6619d97902a9, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 102
