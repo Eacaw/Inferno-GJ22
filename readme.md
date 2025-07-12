@@ -72,7 +72,7 @@ Along with the usual bugfixes and improvements.
 
 We, being the amazing people that we are, seem to have abandoned updating the readme every day, instead we focussed purely on the development of the game. These days (Wednesday - Saturday) we spent the majority of our time adding levels to the game, working to playtest each others levels as we finished them and ironing out any kinks as they were discovered. 
 
-Saturday was spend fixing as many of the UI issues as we could, refining the layout and UX for the game, and ensuring that everything was connected as intended. We also spent some time working on finding and adding all the sounds that you hear in game, adding a new sound manager class to handle it all for us, making our lives much easier. 
+Saturday was spent fixing as many of the UI issues as we could, refining the layout and UX for the game, and ensuring that everything was connected as intended. We also spent some time working on finding and adding all the sounds that you hear in game, adding a new sound manager class to handle it all for us, making our lives much easier. 
 
 ### Day 10:
 
